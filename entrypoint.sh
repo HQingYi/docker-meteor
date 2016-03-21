@@ -7,7 +7,7 @@ export CONF_DIR=/usr/app/config
 
 # Prepare environment
 if [ -d $CONF_DIR ]; then
-    for [env_file in $CONF_DIR/*.sh]; do
+    for env_file in $CONF_DIR/*.sh; do
         [[ -f $env_file ]] && echo "Loading config file: $env_file" && source $env_file
     done
 fi
